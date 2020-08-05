@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>My supermarket</h2>
+  <div class='row'>
+    {{#each _ar}}
+      <div class="border col-lg-4" >
+        <img src="{{image}}" class="w-50 ml-2 float-right">
+        <h2>{{name}}</h2>
+        <a href="shop/{{@index}}" class="btn btn-info">More info</a>
+      </div>  
+
+    {{/each}}
+  </div>
+</div>

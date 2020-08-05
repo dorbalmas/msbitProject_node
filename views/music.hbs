@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Search your song or band/sing you love:</h2>
+  {{!-- מיטודה סוג השליחה ואקשן לאן לשגר את הטופס --}}
+  <form class="d-flex" method="GET" action="/">
+    <input name="q" type="text" class="form-control w-50">
+    <button class="btn btn-primary">Search</button>
+  </form>
+</div>
+<div class="container">
+  <h2>{{title}}</h2>
+  <div class='row'>
+    {{#each _ar}}
+      <div class="col-lg-6 border">
+        <img src={{album.cover_small}} class="w-25 float-left mr-2">
+        <h2>{{title}} , {{ artist.name}}</h2>
+        <audio controls src="{{preview}}"></audio>
+      </div>
+    {{/each}}
+  </div>
+</div>

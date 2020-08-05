@@ -1,0 +1,12 @@
+<div class="container">
+  <a href="/pixa" class="btn btn-info">Back</a>
+  <h2>{{title}}</h2>
+  <div class='row'>
+    {{#each _ar}}
+      <div class="col-lg-6 border">
+        <img src={{previewURL}} class="w-25 float-left mr-2">
+        <h2>tags: {{tags}} </h2>
+      </div>
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <form action="/corona" method="GET" class="row">
+        <input name="country" type="text" class="form-control col-6">
+        <input name="number" type="number" class="form-control col-6">
+        <button class="btn btn-info">search</button>
+    </form>
+</div>
+<div class="container">
+    <div>
+        <p>Country: {{item.country}} </p>
+         <p>Deaths: {{item.deaths}} </p>
+    </div>
+    <h2>Filter CasePerOne million</h2>
+    <div class="row">
+        {{#each _ar}}
+        <div class="col-lg-6 border">
+            <h2>country:{{country}}</h2>
+            <h2>cases:{{casesPerOneMillion}}</h2>
+
+        </div>
+        {{/each}}
+    </div>
+</div>
